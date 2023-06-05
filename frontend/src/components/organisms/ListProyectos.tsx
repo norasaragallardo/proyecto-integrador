@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import './organisms.css'
 
 
-export default function D2() {
+export default function ListProyectos() {
     return (
 <div  className="BS contenedor-flex " >
     <div className="Seccion contenedor-flexV ">

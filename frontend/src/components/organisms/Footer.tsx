@@ -8,7 +8,7 @@ import Container from '@mui/material/Container';
 import './organisms.css'
 
 
-export default function B1() {
+export default function Footer() {
     return (
 <div  className="Seccionf contenedor-flex " >
     <div className="contenedor-flexV " >
@@ -42,7 +42,7 @@ export default function B1() {
     <Button href="acerca%20de%20mi">acerca de mi</Button>
     <Button href="proyectos">proyectos</Button>
     <br />
-    <Box>Contacto <br /> +503 77405253 </Box>
+    <Box>Contacto <br /> +591 73514+952 </Box>
     </div>
 </div>
       );

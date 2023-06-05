@@ -1,20 +1,27 @@
 import * as React from 'react';
 
-import D1 from '../components/organisms/D1';
-import D2 from '../components/organisms/D2';
-import B5 from '../components/organisms/B5';
-import B6 from '../components/organisms/B6';
+import D1 from '../components/organisms/HeaderProyectos';
+import D2 from '../components/organisms/ListProyectos';
+import B5 from '../components/organisms/ExperienciaLaboral';
+import B6 from '../components/organisms/Footer';
+import AboutMe from '../components/organisms/AboutMe';
+import ExperienciaLaboral from '../components/organisms/ExperienciaLaboral';
+import Footer from '../components/organisms/Footer';
+import HeaderProyectos from '../components/organisms/HeaderProyectos';
+import ListProyectos from '../components/organisms/ListProyectos';
 
-function Proyectoss() {
+function Proyectos() {
 
     return (
       <div>
-          <D1/>
-          <D2/>
-          <B5/>
-          <B6/>
+         
+          
+          <HeaderProyectos/>
+          <ListProyectos/>
+          <ExperienciaLaboral/>
+        
       </div>
     )
   }
   
-  export default Proyectoss
+  export default Proyectos

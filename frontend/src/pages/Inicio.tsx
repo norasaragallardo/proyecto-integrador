@@ -1,25 +1,24 @@
-import * as React from 'react';
 
 
-import B1 from '../components/organisms/B1';
-import B2 from '../components/organisms/B2';
-import B3 from '../components/organisms/B3';
-import B4 from '../components/organisms/B4';
-import B5 from '../components/organisms/B5';
-import B6 from '../components/organisms/B6';
-import Login from '../pages/auth/login';
+import Header from '../components/organisms/Header';
+import Habilidades from '../components/organisms/Habilidades';
+import ProyectosSlider from '../components/organisms/ProyectosSlider';
+import AboutMe from '../components/organisms/AboutMe';
+import ExperienciaLaboral from '../components/organisms/ExperienciaLaboral';
+
+
 
 function Inicio() {
 
     return (
       <div>
       
-          <B1/>
-          <B2/>
-          <B3/>
-          <B4/>
-          <B5/>
-          <B6/>
+           <Header/>
+          <Habilidades/>
+          <ProyectosSlider/>
+          <AboutMe/>
+          <ExperienciaLaboral/>
+          
   
       </div>
     )

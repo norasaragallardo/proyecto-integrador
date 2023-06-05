@@ -14,9 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link, useNavigate } from 'react-router-dom';
 import './organisms.css'
+import ResponsiveAppBar from '../molecules/ResponsiveAppBar/ResponsiveAppBar';
 
 
-const pages = ['Inicio', 'Proyectoss', 'Acerca de mi'];
+const pages = ['Inicio', 'Proyectos', 'Acerca de mi'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBarr() {

@@ -8,7 +8,7 @@ import './organisms.css'
 
 
 
-export default function B1() {
+export default function Habilidades() {
     return (
 <div className="Seccion2 ">
     <div  className="contenedor-flex fondoblanco" >

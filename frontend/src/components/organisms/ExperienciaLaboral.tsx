@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import './organisms.css'
 
 
-export default function B1() {
+export default function ExperienciaLaboral() {
     return (
 <div  className="Seccion contenedor-flex fondoceleste" >
      <Box

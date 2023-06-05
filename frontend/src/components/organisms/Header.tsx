@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 import './organisms.css'
 
 
-export default function B1() {
+export default function Header() {
     return (
 <div   className="Seccion contenedor-flex Bgimage fondoceleste H1titulo" >
-    <Box >Mi nombre es SAra Gallardo <br/> y soy Fullstack Developer
+    <Box >Mi nombre es SAra Gallardooo <br/> y soy Fullstack Developer
     <br/>
     <Button href="proyectos" variant="contained" color="success" >
       Mira mis proyectos web</Button>

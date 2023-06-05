@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import './organisms.css'
 
 
-export default function B1() {
+export default function ProyectosSlider() {
     return (
 <div  className="Seccion contenedor-flex fondoceleste" >
     <div >
