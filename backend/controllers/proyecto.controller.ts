@@ -1,6 +1,7 @@
 import Proyectos from '../models/proyectos';
 import { NextFunction, Request, Response } from 'express';
 import { usuarioSchema } from '../validate/usuarioSchema';
+import { proyectoSchema } from '../validate/proyectoSchema';
 
 export const getProyectos = async(req: Request, res: Response) => {
     const proyectos = await Proyectos.findAll(); 
@@ -37,9 +38,9 @@ export const getProyectosId = async (req: Request, res: Response) => {
     const { body } = req;
     const filename = req.file?.filename;
 
-    body.foto = filename;
+    body.imagen = filename;
     
-    await usuarioSchema.validate(body)
+    await proyectoSchema.validate(body)
     
     const result = await Proyectos.create(body);
     res.status(201).json({

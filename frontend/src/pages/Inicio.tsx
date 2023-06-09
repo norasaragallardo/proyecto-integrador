@@ -13,7 +13,7 @@ function Inicio() {
     return (
       <div>
       
-           <Header/>
+          <Header/>
           <Habilidades/>
           <ProyectosSlider/>
           <AboutMe/>

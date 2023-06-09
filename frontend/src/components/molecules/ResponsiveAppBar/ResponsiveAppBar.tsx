@@ -69,10 +69,10 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            PORTAFOLIO
+            ADMIN     
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', mr:120 } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -139,7 +139,7 @@ function ResponsiveAppBar() {
                 to={page.toLowerCase()}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2,mr:2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
@@ -150,9 +150,9 @@ function ResponsiveAppBar() {
             <Tooltip title="Open settings">
               <IconButton 
                 onClick={handleOpenUserMenu}
-                sx={{ p: 0 }}
+                sx={{ p: 1 }}
               >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg"  />
+                <Avatar alt="Remy Sharp" src="/src/assets/icons/perfil.png"  />
               </IconButton>
             </Tooltip>
             <Menu
@@ -171,11 +171,15 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+
+              <MenuItem onClick={handleLogout}>
+                <Typography textAlign="center">Logout</Typography>
+              </MenuItem>
             </Menu>
           </Box> 
         </Toolbar>

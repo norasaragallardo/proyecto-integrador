@@ -9,6 +9,7 @@ import { AppDispatch, RootState } from "src/lib/store";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './login.css'
+import { red } from "@mui/material/colors";
 
 export default function Login() {
 
@@ -30,12 +31,16 @@ export default function Login() {
   console.log('loading', loading);
 
   return (
-    <>
+    <div className="login-page">
+      
 
-      Bienvenido {user?.nombre}
+      <div className="title-login"> Bienvenido {user?.nombre}</div> 
+      
 
-      <Container>
-        <Formik
+      <div className = 'box-login'>
+        <div className="inputs">
+       
+           <Formik 
           initialValues={{ 
             email: '',
             contrasenia: '',
@@ -66,9 +71,9 @@ export default function Login() {
           }) => (
             <form onSubmit={handleSubmit}>
    
-              <TextField 
+              <TextField  className= 'input'
                 sx={{
-                  mt: 3
+                  mt: 10
                 }}
                 fullWidth
                 id="outlined-basic"
@@ -82,9 +87,10 @@ export default function Login() {
                 helperText={errors.email}
               />
 
-              <TextField 
+              <TextField className= 'input'
                 sx={{
-                  mt: 3
+                  mt: 5,
+                  mb:5
                 }}
                 type="password"
                 fullWidth
@@ -99,14 +105,18 @@ export default function Login() {
                 helperText={errors.contrasenia}
               />
 
-              <Button type="submit"  className="buttonlogin">
+              <Button  type="submit"  
+              sx={{
+                mb:5,
+              }}>
                 INGRESAR
               </Button>
             </form>
           )}
         </Formik>
-      </Container> 
-    </>
+        </div>
+      </div> 
+    </div>
   );
 
 }

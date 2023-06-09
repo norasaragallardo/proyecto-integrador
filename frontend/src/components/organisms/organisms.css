@@ -53,9 +53,9 @@
   font-size: 24px;
   line-height: 140%;
 }
- .card {
  
- }
+ 
+ 
 .bf{
   font-style: normal;
 font-weight: 400;
@@ -82,8 +82,8 @@ line-height: 200%;
   
 }
 .Seccion2 {
-  margin : 0px 100px;
-  margin-bottom: 100px ;
+  margin : 0px 200px;
+ 
 }
 .Seccionf{
   height: 200px;
@@ -97,22 +97,22 @@ line-height: 200%;
   flex-direction: row; 
   justify-content: space-around; 
   align-items: center; 
+  margin-top: 30px;
+  column-gap: 60px;
+  padding: 0 150px;
 }
+
+
 
 .contenedor-flex2 {
   display: flex;
   flex-direction: row; 
   justify-content: space-evenly; 
   align-items: center; 
+  
 }
 
-.contenedor-flexV {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-around; 
-  align-items: center; 
-  column-gap: 30px;
-}
+
 
 .contenedor-flexV2 {
   display: flex;
@@ -137,19 +137,39 @@ line-height: 200%;
   padding-bottom: 40px;
 }
 
-.bg-foto {
-  margin-top: 210px;
-  z-index: 1;
-  width: 400px;
-  height: 400px;
+.containerAboutme{
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  position: initial;
 }
-.foto {
+
+.image-container {
+  position: relative;
+}
+
+
+ .foto {
   width: 399px;
   height: 607px;
-  top: 0;
+  top: 31px;
   left: 0;
   z-index: 2;
+position: absolute;
   padding-bottom: 30px;
+ 
+
+}
+.bg-foto {
+  margin-top: 210px;
+z-index: 1;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  
+  
 }
 .about1 {
   padding-left: 4rem;
@@ -199,5 +219,68 @@ line-height: 200%;
   color: #54b3f8;
 }
 
+.contenedor-flex {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin-top: 30px;
+  column-gap: 60px;
+  padding: 0 150px;
+}
+.contenedor-flexV {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center; 
+  column-gap: 60px;
 
+}
+.icon-habilidades{
+  width: 60px;
+  }
+
+
+
+  .img-proyecto{
+border-radius: 20px;
+  }
+  .buton{
+    background-color: aquamarine;
+    color: saddlebrown;
+  }
+
+  .parrafo-experiencia{
+    width: 600px;
+    color: #687782;
+    
+  }
+  .contenedor-experiencia {
+    display: flex;
+  flex-direction: row; 
+  justify-content:center; 
+  align-items: center; 
+  margin-top: 30px;
+  column-gap: none;
+  padding: 0 150px;
+  column-gap: 80px;
+    
+    
+  }
+  .contenedor-exp {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: left; 
+   
+  }
+  .href{
+    text-decoration: none;
+    
+  }
+  .Seccion-habilidades{
+    width: 100%;
+    padding: 150px 100px;
+  }
+ 
 

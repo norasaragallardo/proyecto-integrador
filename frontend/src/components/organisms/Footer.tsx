@@ -1,10 +1,7 @@
-import * as React from 'react';
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-
 import Typography from '@mui/material/Typography';
-
-import Container from '@mui/material/Container';
 import './organisms.css'
 
 
@@ -42,7 +39,7 @@ export default function Footer() {
     <Button href="acerca%20de%20mi">acerca de mi</Button>
     <Button href="proyectos">proyectos</Button>
     <br />
-    <Box>Contacto <br /> +591 73514+952 </Box>
+     <a className='href' href="https://wa.me/59173514952?text=Hola,%20pude%20ver%20tu%20portafolio%20" target='blank'>Contacto <br /> +591 73514952 </a> 
     </div>
 </div>
       );

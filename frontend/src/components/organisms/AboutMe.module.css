@@ -1,0 +1,76 @@
+#root {
+    width: 100%;
+  }
+  .container-about {
+    margin: 0 auto;
+  }
+  .image-container {
+    position: relative;
+  }
+  .bg-foto {
+    margin-top: 210px;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+  }
+  .foto {
+    width: 399px;
+    height: 607px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding-bottom: 30px;
+  }
+  .aboutme {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title {
+    text-align: start;
+    font-size: 40px;
+    line-height: 140%;
+    color: #192e3d;
+  }
+  .about-text {
+    text-align: start;
+    color: #0a5b95;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+  }
+  .text-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 24.3%;
+    background-color: #f1f8fe;
+    border-radius: 10px;
+    height: 400px;
+    padding: 0 4% 0 4%;
+  }
+  .technology {
+    margin-top: 3rem;
+    width: 1269px;
+    height: 280px;
+    left: 325px;
+    top: 731px;
+    background: #fff9f0;
+    border-radius: 16px;
+  }
+  .title-technology {
+    position: absolute;
+    text-align: start;
+    font-size: 40px;
+    line-height: 140%;
+    margin-left: 4.5rem;
+    color: #30312b;
+  }
+  .icons-rechnology {
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    left: 87px;
+    top: 160px;
+  }
+  

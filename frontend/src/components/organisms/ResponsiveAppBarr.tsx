@@ -6,15 +6,14 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link, useNavigate } from 'react-router-dom';
+
 import './organisms.css'
-import ResponsiveAppBar from '../molecules/ResponsiveAppBar/ResponsiveAppBar';
 
 
 const pages = ['Inicio', 'Proyectos', 'Acerca de mi'];
@@ -40,7 +39,7 @@ function ResponsiveAppBarr() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: 'white' }}>
       <div >
         <div className="contenedor-flex2 ">
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -59,7 +58,7 @@ function ResponsiveAppBarr() {
               textDecoration: 'none',
             }}
           >
-           ADMIN
+           SARAG
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -94,7 +93,7 @@ function ResponsiveAppBarr() {
               {pages.map((page) => (
                 <MenuItem 
                 component={Link}
-                to="/usuario"
+                to="/inicio"
                 key={page} 
                 onClick={handleCloseNavMenu}
                 >

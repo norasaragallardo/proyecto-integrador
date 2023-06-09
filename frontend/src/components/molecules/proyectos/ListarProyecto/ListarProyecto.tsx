@@ -16,6 +16,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import PhotoRoundedIcon from '@mui/icons-material/PhotoRounded';
 import { fileURLToPath } from 'url';
 import IProyectos from 'src/interfaces/IProyectos';
+import { fetchValidateToken } from '../../../../lib/slice/authSlice';
 
 interface ListarProyectoProp {
   load: boolean,
@@ -52,11 +53,11 @@ const ListarProyecto: React.FC<ListarProyectoProp> = ({
 
   };
 
-
+  
   return (
 
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650 , maxWidth : 1200}} aria-label="simple table">
         <TableHead>
           <TableRow sx={{backgroundColor: '#a9d3a4'}}>
             <TableCell>Nombre</TableCell>
@@ -84,7 +85,7 @@ const ListarProyecto: React.FC<ListarProyectoProp> = ({
               </TableCell>
               <TableCell>
                 {
-                row.createdAt &&  <img width={20} src = {`http://localhost:8080/uploads/${row.imagen} `}></img>
+                row.imagen &&  <img width={20} src = {`http://localhost:8080/uploads/${row.imagen} `}></img>
                 }
              
                 

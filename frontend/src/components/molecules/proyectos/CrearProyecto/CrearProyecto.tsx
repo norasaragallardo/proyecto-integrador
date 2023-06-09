@@ -10,12 +10,12 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 
-interface CrearUsuarioProps {
+interface CrearProyectoProps {
   setLoad: any;
   load: boolean;
 }
 
-const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
+const CrearProyecto: FC<CrearProyectoProps> = ({ setLoad, load }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -29,7 +29,7 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
-        Crear usuario
+        Crear proyecto
       </Button>
       <Dialog
         open={open}
@@ -40,27 +40,24 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
         <Formik
           initialValues={{
             nombre: "",
-            email: "",
-            contrasenia: "",
-            foto: "",
-            estado: "",
+            descripcion: "",
+            url: "",
+            imagen: "",
+            fecha: "",
           }}
           validationSchema={Yup.object({
             nombre: Yup.string()
               .max(15, "Must be 15 characters or less")
               .required("Required"),
-            email: Yup.string()
-              .email("Invalid email address")
+              descripcion: Yup.string()
               .required("Required"),
-            contrasenia: Yup.number()
-              .min(8, "La contraseña debe tener minimo 8 caracteres")
-              .required("Required"),
-            foto: Yup.string().required("Required"),
-            estado: Yup.number().required("Required"),
+            url: Yup.string().required("Required"),
+            imagen: Yup.string(),
+            fecha: Yup.date()
           })}
           onSubmit={async (values, { setSubmitting }) => {
             const response = await axios.post(
-              `${import.meta.env.VITE_URL_SERVER}/api/usuarios`,
+              `${import.meta.env.VITE_URL_SERVER}/api/proyectos`,
               values
             );
             setLoad(!load);
@@ -79,7 +76,7 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
           }) => (
             <form onSubmit={handleSubmit}>
               <DialogTitle id="alert-dialog-title">
-                Crear un nuevo usuario
+                Crear un nuevo proyecto
               </DialogTitle>
               <DialogContent>
                 <TextField
@@ -104,48 +101,18 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
                   }}
                   fullWidth
                   id="outlined-basic"
-                  label="E-mail"
-                  name="email"
+                  label="url"
+                  name="url"
                   variant="outlined"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
-                  error={Boolean(errors.email)}
-                  helperText={errors.email}
+                  value={values.url}
+                  error={Boolean(errors.url)}
+                  helperText={errors.url}
                 />
 
-                <TextField
-                  sx={{
-                    mt: 3,
-                  }}
-                  fullWidth
-                  id="outlined-basic"
-                  label="Contraseña"
-                  name="contrasenia"
-                  variant="outlined"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.contrasenia}
-                  error={Boolean(errors.contrasenia)}
-                  helperText={errors.contrasenia}
-                />
+                
 
-                <TextField
-                  type="file"
-                  sx={{
-                    mt: 3,
-                  }}
-                  fullWidth
-                  id="outlined-basic"
-                  label="Foto"
-                  name="file"
-                  variant="outlined"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.foto}
-                  error={Boolean(errors.foto)}
-                  helperText={errors.foto}
-                />
                 <Field
                   name="file"
                   type="file"
@@ -171,21 +138,7 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
                     />
                   )}
                 />
-                <TextField
-                  sx={{
-                    mt: 3,
-                  }}
-                  fullWidth
-                  id="outlined-basic"
-                  label="Estado"
-                  name="estado"
-                  variant="outlined"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.estado}
-                  error={Boolean(errors.estado)}
-                  helperText={errors.estado}
-                />
+                
               </DialogContent>
               <DialogActions>
                 <Button type="submit">Crear</Button>
@@ -198,4 +151,4 @@ const CrearUsuario: FC<CrearUsuarioProps> = ({ setLoad, load }) => {
   );
 };
 
-export default CrearUsuario;
+export default CrearProyecto;
